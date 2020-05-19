@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HASHAGE Dynamique</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/display.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+<body id="page-top" class="sidebar-toggled">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion  p-0 toggled">
+            <div class="sidebare choices container-fluid d-flex flex-column p-0 " style="height: 455px">
+<!--                le logo-->
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="../../../Page D'Acceuil/index.html">
+<!--                    <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>-->
+<!--                    <div class="sidebar-brand-text mx-3"><span>Logo</span></div>-->
+                    <div class="sidebar-brand-icon " ><img src="assets/img/logo/v.png" height="40"></div>
+                    <div class="sidebar-brand-text mt-2"><img src="assets/img/logo/i.png" height="25" ></div>
+                </a>
+                <!--                le logo fin-->
+                <hr class="sidebar-divider my-0">
+                <ul class="nav navbar-nav text-light mt-4" id="accordionSidebar">
+                    <li class="nav-item mt-3" role="presentation" id="rechercher" ><a class="nav-link" href="#" onclick="show_form_box(2)"><i class="fas fa-search"></i><span>Recherche</span></a>
+                        <div id="rechercher-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="rechercher-alert"></p>
+                                <input type="number" class="input-field" id="rechinp" placeholder="L'enregistrement" value="1" required>
+                                <button type="submit" id="rechsub" class="submit-btn">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="nav-item mt-3" role="presentation" id="inserer"><a class="nav-link" href="#" onclick="show_form_box(3)"><i class="fas fa-plus-circle"></i><span >Insertion</span></a>
+                        <div id="inserer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="inserer-alert"></p>
+                                <input type="number" id="insinp" class="input-field" placeholder="L'enregistrement" value="1" required>
+                                <button type="submit" id="inssub" class="submit-btn">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+
+
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav>
+                    <div class=" navigate container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <nav class="navbar text-light navbar-expand-lg navbar-dark">
+                            <button class="navbar-toggler" type="button" data-togggle="collapse" data-target="#navbarMenu"
+                                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation">
+                                <span class="navbar-toggle-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse"></div>
+                            <div class=" menu-bar collapse navbar-collapse" id="navbarMenu">
+                                <ul class="navbar-nav text-dark mr-auto">
+                                    <li class="nav-item active">
+                                        <a href="#" class="nav-link">Chapitre 1</a>
+
+                                        <div class="sub-menu-1">
+                                            <ul>
+                                                <li><a href="../../chapitre1/TOF/index.html?#">TOF</a></li>
+                                                <li><a href="../../chapitre1/TObF/index.html?#">TObF</a></li>
+                                                <li><a href="../../chapitre1/TOVCb/index.html?#">TOVCb</a></li>
+                                                <li><a href="../../chapitre1/TOVC/index.html?#">TOVC</a></li>
+                                                <li><a href="../../chapitre1/TObVC/index.html?#">TObVC</a></li>
+                                                <li><a href="../../chapitre1/TObVCb/index.html?#">TObVCb</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="#" class="nav-link">Fichier Indexes</a>
+
+                                        <div class="sub-menu-1">
+                                            <ul>
+                                                <li><a href="../../chapitre2/Dense/index.html?#">Dense</a></li>
+                                                <li><a href="../../chapitre2/NonDense/index.html?#">Non Dense</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="#" class="nav-link">Hachage</a>
+
+                                        <div class="sub-menu-1">
+                                            <ul>
+                                                <li><a href="../../chapitre4/EssaiLineaire/index.html?#">Essai Lineaire</a></li>
+                                                <li><a href="../../chapitre4/DoubleHachage/index.html?#">Double Hachage</a></li>
+                                                <li><a href="../../chapitre4/ChainageSepare/index.html?#">Chainage separe</a></li>
+                                                <li><a href="../../chapitre4/ChainageInterne/index.html?#">Chainage interne</a></li>
+                                                <li><a href="../../chapitre4/HachageDynamique/index.html?#">Hachage Dynamique</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="#" class="nav-link">Les Arbres</a>
+
+                                        <div class="sub-menu-1">
+                                            <ul>
+                                                <li><a href="../../chapitre3/M-aire/index.html?#">M-aire</a></li>
+                                                <li><a href="../../chapitre3/B-arbre/index.html?#">B-arbre</a></li>
+                                                <li><a href="../../chapitre3/B-Plus-arbre/index.html?#">B+ arbre</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Tri-Fusion</a>
+                                        <div class="sub-menu-1">
+                                            <ul>
+                                                <li><a href="../../chapitre5/Tri/index.html?#">Tri</a></li>
+                                                <li><a href="../../chapitre5/Fusion/index.html?#">Fusion</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <!--                                <form  class="form-inline my-2 my-lg-0">-->
+                                <button id="affich-guide" class="btn menu-right-btn text-light border" >
+                                    Guide
+                                </button>
+                                <!--                                </form>-->
+                            </div>
+                        </nav>
+            </div>
+            </nav>
+                <div id="guide" >
+
+                </div>
+                <div  class="fichier"  id="file"  >
+                    <div ><ul id="container2"><li><div id="calculadr"></div></li><li><div id="information" ></div></li><li><div id="hashage"></div></li></ul></div>
+
+
+                </div>
+
+        </div>
+        <footer class="sticky-footer" style="padding: 0px;">
+            <div class=" controls ">
+                <nav class="navbar navbar-dark  navbar-expand-lg ">
+                <ul class="navbar-nav text-light mr-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#"><label class="nav-link p-0" >rapide</label></a></li>
+
+                    <li class="nav-item  active" role="presentation">
+                        <input class="nav-link  " type="range" id="speed" name="vol" min="0" max="200">
+                    </li>
+                    <li class="nav-item mr-10" role="presentation"><a class="nav-link active" href="#"><label class="nav-link p-0" >lent</label></a></li>
+
+                    <li class="nav-item" role="presentation" id="play"><a class="nav-link active" href="#"><i class="fas fa-play"></i></a></li>
+                    <li class="nav-item " role="presentation" id="pause"><a class="nav-link active" href="#"><i class="fas fa-pause"></i></a></li>
+
+<!--                    <li class="nav-item active" role="presentation">-->
+<!--                        <input class="nav-link mr-2" type="range" >-->
+<!--                    </li>-->
+
+                </ul>
+                </nav>
+            </div>
+            <div class="d-inline">
+            <a class="border mr-5 rounded d-inline scroll-to-top" href="#page-top" onclick="upDown()"><i class="fas fa-angle-up" id="up" ></i>
+            </a>
+                <div id="algo" class="algo">
+
+                </div>
+
+            </div>
+        </footer>
+    </div></div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="anime-master/lib/anime.min.js"></script>
+    <script src="assets/js/display.js"></script>
+
+
+  <script src="assets/js/hashage.js"></script>
+   
+</body>
+
+</html>

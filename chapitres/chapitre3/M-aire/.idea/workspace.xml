@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d0ecb8f6-80cd-4102-9d2d-d846ad4fdd42" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aTzrfkbsexmJNZBVHEhKqUxoQn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fr.dic" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="1" BundledDictionary0="english.dic" RuntimeDictionaries="0" Folders="2" Folder0="C:\Users\USER\Desktop" Folder1="C:\Users\USER\Desktop" CustomDictionaries="2" CustomDictionary0="C:\Users\USER\Desktop\fr_FR.dic" CustomDictionary1="C:\Users\USER\Desktop\fr.dic" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="project-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d0ecb8f6-80cd-4102-9d2d-d846ad4fdd42" name="Default Changelist" comment="" />
+      <created>1586774572130</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586774572130</updated>
+      <workItem from="1586774576158" duration="12595000" />
+      <workItem from="1586802103016" duration="1010000" />
+      <workItem from="1586822117603" duration="3380000" />
+      <workItem from="1586974573708" duration="354000" />
+      <workItem from="1587306239319" duration="15380000" />
+      <workItem from="1587383352844" duration="5434000" />
+      <workItem from="1587491832528" duration="129000" />
+      <workItem from="1587492902273" duration="7406000" />
+      <workItem from="1587568201620" duration="1057000" />
+      <workItem from="1588002481079" duration="1449000" />
+      <workItem from="1588010930821" duration="2131000" />
+      <workItem from="1588053848278" duration="4519000" />
+      <workItem from="1588094445371" duration="2843000" />
+      <workItem from="1588193242579" duration="1346000" />
+      <workItem from="1588282511525" duration="1790000" />
+      <workItem from="1588440352549" duration="368000" />
+      <workItem from="1588453845591" duration="403000" />
+      <workItem from="1588455529188" duration="128000" />
+      <workItem from="1588535353480" duration="2308000" />
+      <workItem from="1588677936327" duration="1213000" />
+      <workItem from="1588681717378" duration="4456000" />
+      <workItem from="1588686559446" duration="35000" />
+      <workItem from="1588717151665" duration="7228000" />
+      <workItem from="1588889413612" duration="2900000" />
+      <workItem from="1588979537262" duration="759000" />
+      <workItem from="1589260638166" duration="2268000" />
+      <workItem from="1589631519673" duration="939000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1587496708305">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587496708305" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1587496712147">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587496712147" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1587312788645">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1587312788645" />
+  </component>
+</project>

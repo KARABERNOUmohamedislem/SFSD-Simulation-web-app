@@ -1,0 +1,86 @@
+
+.fichier{
+    width: 1125px;
+    height: 237px;
+    padding: 0px;
+}
+
+.Tenreg{
+    width: 0px;
+    height: 0px;
+    /*top: -2px;*/
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    background: white;
+    border-color: black;
+    margin-top: 30px;
+    margin-left: 2px;
+    position: relative;
+    font-size: 13px;
+    display: inline-block;
+    opacity: 0;
+
+
+}
+.premierecasevide{
+    width:20px ;
+    height: 20px;
+    position: relative;
+    margin: 10px;
+    background-color: #1fdfff;
+}
+p{
+
+    color: black;
+    margin: 5px;
+    position: center;
+    /*font-size: 10px;*/
+
+
+}
+#mair{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+
+
+
+
+#algo p{
+    font-size: 17px;
+    font-family:"Book Antiqua",Serif;
+    margin-bottom: 5px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+
+
+}
+
+
+#titre{
+
+    color: #3569ff;
+}
+
+#conc{
+    color: #00ec2a;
+}
+
+
+#conc2{
+    color: #ff0500;
+}
+
+.line:before{
+    border: .1200em solid red;
+
+}
+.line:after{
+    border: .1200em solid red;
+}
+

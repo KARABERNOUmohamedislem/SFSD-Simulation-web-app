@@ -1,0 +1,436 @@
+/*
+les couleurs de site web
+
+-1 (claire) ---> max (fonce)
+*/
+/*--------grey-----------*/
+:root{
+--grey-1 : #F2F2F7;
+--grey-2 : #E5E5EA;
+--grey-3 : #D1D1D6;
+--grey-4 : #C7C7CC;
+--grey-5 : #AEAEB2;
+--grey-6 : #8E8E93;
+--grey-7 : #636366;
+--grey-8 : #48484A;
+--grey-9 : #3A3A3C;
+--grey-10 : #2C2C2E;
+--grey-11 : #1C1C1E;
+--grey-12 : #141416;
+
+
+/*----------bleu-------*/
+
+--bleu-1 : #0084FF;
+--bleu-2 : #007AFF;
+--bleu-3 : #0081E2;
+
+
+/*----------pink-------*/
+
+--pink-1 : #FF375F;
+--pink-2 : #FF2D55;
+--pink-3 : #F21D51;
+
+
+/*----------red-------*/
+
+--red-1 : #FF453A;
+--red-2 : #FF3B30;
+--red-3 : #F22520;
+
+
+/*----------purple-------*/
+
+--purple-1 : #BF5AF2;
+--purple-2 : #AF52DE;
+--purple-3 : #9E14EF;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+
+
+#content{
+    background: var(--grey-1);
+}
+
+.sidebar{
+    background: var(--grey-1);
+    width: 90px;
+}
+
+.nav-link{
+    font-size: 18px;
+}
+.menu-right-btn{
+    padding: 8px 30px;
+    background-color: transparent;
+    transition: all 300ms ease-in;
+}
+
+.menu-right-btn:hover{
+    color: white;
+    background-color: var(--pink-3);
+}
+.nav-link:hover{
+    color: white !important;
+
+}
+.active .nav-link{
+    color: white !important;
+}
+.choices{
+    background: linear-gradient(to top,var(--pink-1),var(--pink-3));
+    border-bottom-right-radius: 10px;
+}
+.navigate{
+    background: linear-gradient(to left,var(--pink-1),var(--pink-3));
+}
+
+span{
+    font-size: 13px;
+}
+
+/*  sub menu */
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+
+}
+
+.sub-menu-1{
+    display: none;
+    opacity: 0;
+    transition: all 1000ms ease-in;
+}
+
+
+.menu-bar ul .nav-item:hover .sub-menu-1{
+    display: block;
+    opacity: 1;
+    position: absolute;
+    background: var(--pink-3);
+    z-index: 1;
+    margin-left: -15px;
+
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    text-decoration: none;
+    border-radius: 0;
+    text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a{
+    color: white;
+    text-decoration: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    color: #1fdfff;
+
+}
+
+/*======================= styling des form boxes=================*/
+
+.form-box{
+    width: 380px;
+    /*height: auto;*/
+    position: absolute;
+   margin-top: -90px;
+    margin-left:105px;
+    background: var(--grey-2);
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 30px;
+    border: solid 1px var(--grey-7);
+    z-index: 1;
+    display: none;
+}
+.input-group{
+    /*top: 180px;*/
+    position: relative;
+    display: inline;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 380px;
+    height: auto;
+    transition: .5s;
+
+}
+.submit-btn{
+    width: 200px;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin-top: 30px;
+    margin-left: 140px;
+    background: linear-gradient(to right,var(--pink-3),var(--pink-1));
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.input-field{
+    width: 300px;
+    display: block;
+    padding:  0;
+    margin: auto;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.alertt{
+    width: max-content;
+    color: red;
+    font-size: 13px;
+    margin-left: 35px;
+}
+.ps{
+    font-size: 13px;
+    width: max-content;
+    color: black;
+    margin-top: 5px;
+    margin-left: 35px;
+}
+/*#initialiser:hover .form-box{*/
+/*    display: block;*/
+/*}*/
+/*#rechercher:hover .form-box{*/
+/*    display: block;*/
+/*}*/
+/*#supprimer:hover .form-box{*/
+/*    display: block;*/
+/*}*/
+/*#inserer:hover .form-box{*/
+/*    display: block;*/
+/*}*/
+/* styling ta3 vitesse ===========================*/
+
+input[type=range]{
+    background: transparent;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+
+    /*box-shadow: 1px 1px 1px #50555C;*/
+    background: var(--grey-3);
+    border-radius: 14px;
+    border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 10px;
+    width: 15px;
+    border-radius: 12px;
+    background: var(--grey-7);
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 14px;
+    cursor: pointer;
+   
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #50555C;
+    border: 0px solid #000000;
+    border-radius: 28px;
+    box-shadow: 1px 1px 1px #50555C;
+}
+input[type=range]::-ms-fill-upper {
+    background: #50555C;
+    border: 0px solid #000000;
+    border-radius: 28px;
+    box-shadow: 1px 1px 1px #50555C;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #50555C;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #50555C;
+}
+
+/*======================= guide styling========================*/
+
+.guide{
+    height: auto;
+    width: max-content;
+    /*max-width: 510px;*/
+    min-width: 400px;
+    min-height: 400px;
+    /*padding-top: 10px ;*/
+    /*padding-left: 30px;*/
+    /*padding-right: 30px;*/
+    position: relative;
+    margin: auto;
+    margin-top: 70px;
+    background: var(--grey-2);
+    color: black;
+    border: solid 1px var(--grey-7);
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 2;
+}
+#close{
+
+    position: relative;
+    right: 0;
+    top: 0;
+    /*justify-self: end;*/
+    z-index: 2;
+    /*margin-left:33px;*/
+    /*transform: translate(-100%,0);*/
+    float: right;
+    color: darkred;
+    cursor: pointer;
+
+}
+.guide-control{
+    width: 100%;
+    height: max-content;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: var(--grey-4);
+    justify-content: center;
+}
+.guide-control p{
+    font-size: 18px;
+    width: max-content;
+    height: max-content;
+    margin-left: 45%;
+margin-top: 0;
+    transform: translate(-25%,0);
+}
+#buttons{
+    position: relative;
+    float: bottom;
+    padding-bottom: 5px;
+}
+.guide-content{
+    padding-right: 10px;
+    padding-left: 10px;
+    min-height: 320px;
+    display: none;
+
+}
+.next-btn{
+    width: 150px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    margin-top: 5px;
+
+    margin-bottom: 5px;
+    background:var(--pink-3);
+    color: white;
+
+    outline: none;
+    border: solid 1px white;
+    border-radius: 30px;
+}
+
+.previous-btn{
+    width: 150px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: var(--pink-3);
+    color: white;
+    border: solid 1px white;
+    outline: none;
+    border-radius: 30px;
+}
+
+/*=================================================*/
+.mr-10{
+    margin-right: 70px;
+}
+
+.algo {
+    height: auto;
+    /*max-height: 270px;*/
+    width: auto;
+    min-width: 350px;
+    max-width: 500px;
+    background-color: white;
+    border: solid 3px #1D74AD;
+    padding: 20px 10px 20px 10px;
+    border-radius: 30px;
+    position: absolute;
+    /*margin-top: -300px;*/
+    bottom: 80px;
+    /*left: 50%;*/
+    right: 30px;
+
+    /*overflow: auto;*/
+    display: block;
+    z-index: 1;
+}
+.algo p{
+    color: black;
+    font-size: 17px;
+    font-family: Georgia, serif;
+
+    width: auto;
+    height: auto;
+     border-radius: 10px;
+    margin-bottom: 5px;
+}
+.controls{
+    margin-right: 445px;
+    float: right;
+    background: linear-gradient(to top,var(--pink-1),var(--pink-3));
+    width: min-content;
+    height: 55px;
+    margin-bottom: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+footer{
+
+    background: var(--grey-1);
+    height: 55px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0px;
+    padding-bottom: 0 ;
+}
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}

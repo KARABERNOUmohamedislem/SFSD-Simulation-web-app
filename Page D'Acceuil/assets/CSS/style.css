@@ -1,0 +1,246 @@
+:root{
+  /* -- grey --*/
+
+--grey1 : #F2F2F7;
+--grey2 : #E5E5EA;
+--grey3 : #D1D1D6;
+--grey4 : #C7C7CC;
+--grey5 : #AEAEB2;
+--grey6 : #8E8E93;
+--grey7 : #636366;
+--grey8 : #48484A;
+--grey9 : #3A3A3C;
+--grey10 : #2C2C2E;
+--grey11 : #1C1C1E;
+--grey12 : #141416;
+
+  /* -- bleu --*/
+
+--bleu1 : #0084FF;
+--bleu2 : #007AFF;
+--bleu3 : #0081E2;
+--bleu4 : rgb(0, 96, 170);
+
+  /* -- pink --*/
+
+--pink1 : #FF375F;
+--pink2 : #FF2D55;
+--pink3 : #F21D51;
+
+  /* -- red --*/
+
+--red1 : #FF453A;
+--red2 : #FF3B30;
+--red3 : #F22520;
+
+  /* -- purple --*/
+
+--purple1 : #BF5AF2;
+--purple2 : #AF52DE;
+--purple3 : #9E14EF;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html {
+  font-size: 16px;
+}
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+  }
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('img/mac.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+.card{
+  min-height: 25rem;
+}
+
+
+
+
+
+
+/*--------------------------------------------------*/
+
+.container-fluid jumbotron padding col-12{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.container
+{
+  position: relative;
+  width: 1300px;
+  display: flex;
+  flex-wrap:wrap ;
+  justify-content: space-around;
+}
+
+.container .box
+{
+  position: relative;
+  width: 180px;
+  height: 300px;
+  margin: 20px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container .box .imgBx
+{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  clip-path: circle(300px at center 100px) ;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
+
+.container .box:hover .imgBx
+{
+  clip-path: circle(80px at center 100px);
+  transition-delay: 0s;
+
+}
+
+.container .box:hover .imgBx img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .box .content
+{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 55%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+.container .box .content  p{
+
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  background-color: lightgrey
+
+
+}
+
+
+.container .box .content h2,
+.container .box .content  p,
+.container .box .content  a
+{
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(20px);
+}
+
+.container .box:hover .content h2
+{
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:01s ;
+}
+
+.container .box:hover .content  p
+{
+  opacity: 1;
+  transform: translateY(30px);
+  transition-delay: 1ms;
+}
+
+.container .box:hover .content  a
+{
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 1.2ms;
+}
+
