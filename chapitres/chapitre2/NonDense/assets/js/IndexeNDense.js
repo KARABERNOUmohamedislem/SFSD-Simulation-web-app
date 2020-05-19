@@ -896,7 +896,7 @@ console.log(k);
             }
             trouv=false;
             i=k;
-            if (k=this.nbI){k--;i--;}
+            if (k==this.nbI){k--;i--;}
             buf1= f1.lireDir(k);
             anime.animeblockdown(k);
             await sleep(1500);

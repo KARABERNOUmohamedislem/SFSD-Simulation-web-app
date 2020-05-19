@@ -910,10 +910,7 @@ for(var t=0;t<fich.tabBloc.length;t++){
 
 function alertt(i,msg) {
     switch (i) {
-        case 1:{
-            document.getElementById('initialiser-alert').innerText='*'+msg;
-            break;
-        }
+
         case 2:{
             document.getElementById('rechercher-alert').innerText='*'+msg;
             break;
@@ -941,7 +938,7 @@ function verif(tab) {
 }
 function vider_alertt() {
    
-            document.getElementById('initialiser-alert').innerText = '';
+
     
             document.getElementById('rechercher-alert').innerText = '';
        
@@ -988,6 +985,8 @@ function supp() {
     let s=document.getElementById('supinp');
     var z=s.value;
     if (z!='') {
+        document.getElementById("supprimer-form").style.display = 'none';
+        box_shown = 0;
         if (fich.tete.nbBloc != 0) {
 
 
@@ -995,8 +994,7 @@ function supp() {
         } else {
             alertt(4,"Le fichier est vide");
         }
-        document.getElementById("supprimer-form").style.display = 'none';
-        box_shown = 0;
+
     }
 }
 
@@ -1010,6 +1008,7 @@ async function intialiser(){
     await (fich.insertion(98,'ckhard'));
 
 }
+
 document.getElementById('inssub').onclick=insere;
 document.getElementById('rechsub').onclick=rech;
 document.getElementById('supsub').onclick=supp;
