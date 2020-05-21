@@ -1,0 +1,80 @@
+#s1{
+	border: 0.5px solid #000;
+	z-index: 0;
+}
+
+#s2{
+	border: 0.5px solid #000;
+	z-index: 0;
+}
+
+#Btree{
+    margin: auto;
+    width: 100%;
+    color: #000;
+  }
+
+.noeud{
+    max-width: 140px;
+    position: relative;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    border: #000 1px solid;
+    border-collapse: collapse;
+    opacity: 0;
+}
+
+.feuille{
+    width: 70%;
+    margin: auto;
+    padding: 0;
+    border: #000 1px solid;
+    border-collapse: collapse;
+    opacity: 0;
+}
+
+.val{
+    margin: auto;
+    height: 25px;
+    padding: 1px 5px;
+    border-collapse: collapse;
+    border: #000 0.5px solid;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    color: #000;
+}
+
+.noeud .val{
+    width: 50%;
+}
+
+.to{
+    position: absolute;
+    border: 1px solid #000;
+    opacity: 0;
+}
+
+.ba{
+    width: 0; 
+    border: 1px solid #000; 
+    height: 30px; 
+    margin: auto;
+    opacity: 0;
+}
+
+#table{
+    opacity: 0;
+    border-collapse: collapse;
+    border: #000 1px solid;
+    margin: 300px 30%;
+}
+
+.c{
+    border: #000 1px solid;
+    border-collapse: collapse;
+    width: 30px;
+    text-align: center;
+    padding: 5px;
+}

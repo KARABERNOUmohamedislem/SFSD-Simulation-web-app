@@ -1,0 +1,88 @@
+body{
+    font-family: "SF Display";
+}
+
+.team .item {
+    text-align: center;
+    position: relative;
+    margin-bottom: 15px;
+    overflow: hidden;
+    padding:5px ;
+    width: 0px;
+
+}
+.row{
+    width: 100%;
+}
+
+.imgg{
+    height: 400px;
+    width: 100%;
+}
+.team .item:hover .info {
+    bottom: 50px;
+}
+.team .item:hover .team-img:after {
+    opacity: 1;
+    visibility: visible;
+}
+.team .item .team-img {
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+}
+.team .item .team-img:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    background: -webkit-gradient(linear, left bottom, left top, from(#111), to(rgba(0, 0, 0, 0.1)));
+    background: linear-gradient(to top, #111, rgba(0, 0, 0, 0.1));
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+.team .item .info {
+    position: absolute;
+    bottom: -500px;
+    left: 0;
+    padding: 0 15px;
+    width: 100%;
+    z-index: 4;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+.team .item .info h6 {
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+.team .item .info span {
+    font-size: 13px;
+   font-family: "SF Display";
+    margin-bottom: 10px;
+    color: var(--bleu1)
+}
+.team .item .info p {
+    margin-bottom: 10px;
+    color: #a9a9a9;
+}
+.team .item .info .icon {
+    margin: 0 10px;
+    font-size: 12px;
+    color: #eee;
+    cursor: pointer;
+}
+.pink{
+    color: deeppink;
+    font-weight: bold;
+}
+
+i:hover{
+   
+}

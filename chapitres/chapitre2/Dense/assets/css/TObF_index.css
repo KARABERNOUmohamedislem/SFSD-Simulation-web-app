@@ -1,0 +1,40 @@
+#TObF_index{
+    margin: auto;
+    width: 100%;
+    margin: 10px;
+    color: #000;
+  }
+  
+  .inf{
+    border: 1px solid #dddddd; 
+    text-align: center; 
+    padding: 1px; 
+    width: 60%
+  }
+  
+  .cle-eff{
+    border: 1px solid #dddddd;  
+    text-align: center; 
+    padding: 1px;
+  }
+  
+  .bloc{
+    display: inline-table; 
+    margin: 28px 2px; 
+    width: 20%; 
+    min-width: 250px;
+    border: black solid 1px; 
+    padding: 2px; 
+    font-size: 13px;
+  }
+  
+  .nb{
+    border: 1px solid #dddddd; 
+    float: right; 
+    text-align: center; 
+    padding: 1px 5px; 
+    width: 10%; 
+    height: 22px;
+    min-width: 28px;
+  }
+  

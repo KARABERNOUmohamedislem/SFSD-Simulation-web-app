@@ -1,0 +1,75 @@
+
+.fichier{
+    width: 1125px;
+    height: 237px;
+    padding: 0px;
+}
+.Tblock{
+    width: 250px;
+    height: 100px;
+    border-style: solid;
+    border-width: thick;
+    border-color: #ed7468;
+    margin-top: 30px;
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+
+}
+.Tenreg{
+    width:20px ;
+    height: 20px;
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+    margin-top: 30px;
+    margin-left: 2px;
+    position: relative;
+    display: inline-block;
+
+    /*background-color: #b1bbff;*/
+}
+.Tenreg p{
+    position: center;
+    color: black;
+    font-size: 10px ;
+    padding: 3px;
+
+
+}
+.premierecasevide{
+    width:20px ;
+    height: 20px;
+    position: relative;
+    margin: 10px;
+    background-color: #1fdfff;
+}
+
+#algo p{
+    font-size: 17px;
+    font-family: "Book Antiqua",Serif;
+    margin-bottom: 0;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+
+
+
+}
+
+
+#titre{
+
+    color: #3569ff;
+}
+
+#conc{
+    color: #00ec2a;
+}
+
+
+#conc2{
+    color: #ff0500;
+}
+

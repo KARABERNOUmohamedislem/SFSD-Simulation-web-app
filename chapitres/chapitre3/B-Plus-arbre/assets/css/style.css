@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+/*body {*/
+/*    background-color: #3e94ec;*/
+/*    font-family: "Roboto", helvetica, arial, sans-serif;*/
+/*    font-size: 16px;*/
+/*    font-weight: 400;*/
+/*    text-rendering: optimizeLegibility;*/
+/*}*/
+
+
+/*===================================================================css 9dim =========================================*/
+.fichier{
+    width: 1125px;
+    height: 237px;
+    padding: 0;
+}
+.Tblock{
+    width: 250px;
+    height: 100px;
+    border-style: solid;
+    border-width: medium;
+    border-color: #ed7468;
+    margin-top: 30px;
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+
+}
+.Tenreg{
+    width:20px ;
+    height: 20px;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    margin-top: 30px;
+    margin-left: 2px;
+    position: relative;
+    display: inline-block;
+    /*background-color: #b1bbff;*/
+}
+.premierecasevide{
+    width:20px ;
+    height: 20px;
+    position: relative;
+    margin: 10px;
+    background-color: #1fdfff;
+}
+p{
+    width:10px ;
+    height: 10px;
+    color: black;
+    margin: 5px;
+    position: center;
+    font-size: 8px;
+}
+/*.algo{*/
+/*    height: 40%;*/
+/*    width: 30%;*/
+/*    background-color: #ed7468;*/
+/*    position: absolute;*/
+/*   transform: translate(800px,100px);*/
+/*    display: none;*/
+/*    z-index: 1;*/
+/*}*/
+
+.tf-tree{
+    width: 1400px;
+    height: 600px;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+
+}
+.center{
+    position: relative;
+    width: max-content;
+    float: left;
+    margin: 0;
+    /*left: 40%;*/
+    /*transform: translate(-50%,0);*/
+    display: inline-block;
+}
+.tf-nc{
+    margin: 0 auto;
+}
+
+
+.val{
+    display: inline-block;
+    text-align: center;
+    border: solid black 2px;
+    margin: 0;
+    float: left;
+    width: 20px;
+    height: 25px;
+    background: white;
+    font-size: 13px;
+    color: black;
+}
+/*.val:first-child{*/
+/*    border-right: solid black 3px;*/
+/*}*/
+/*.val:last-child{*/
+/*    border-left: solid black 3px;*/
+/*}*/
+
+#invisible{
+    display: inline-block;
+    margin: 0 10px;
+}
+.vide{
+    width: 94px;
+
+}
+svg{
+    /*display: inline-flex;*/
+    width: 30px;
+    height: 20px;
+    position: relative;
+    /*float: left;*/
+    margin-left: 60px;
+
+}
+path{
+    width: 30px;
+    height: 20px;
+    position: relative;
+    display: block;
+
+}
+
+.svg{
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 5px;
+}
+
+/*========tests */
+/*#tf2{*/
+/*     border: solid 2px red;*/
+/* }*/
+/*#tf2::after{*/
+/*    border-color: red;*/
+/*    border-width: 3px;*/
+/*}*/
+.before::before{
+    border: solid 3px red;
+}
+.after::after{
+    border: solid 3px red;
+}
+.before-top::before{
+    border: solid 3px red;
+    
+}

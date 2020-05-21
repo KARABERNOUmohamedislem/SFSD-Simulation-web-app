@@ -1,0 +1,75 @@
+.fichier{
+    width: 1125px;
+    height: 237px;
+    padding: 0;
+}
+.Tblock{
+    width: 95px;
+    height: 240px;
+    border-style: solid;
+    border-width: medium;
+    border-color: #000000;
+    margin-top: 30px;
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+
+}
+.Tenreg{
+    width:50px ;
+    height: 20px;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    margin-top: 0px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+    position: relative;
+    display:inline-list-item;
+    /*background-color: #b1bbff;*/
+}
+.Tenreg p{
+    width: max-content;
+    height: max-content;
+    color: black;
+}
+.premierecasevide{
+    width:20px ;
+    height: 20px;
+    position: relative;
+    margin: 10px;
+    background-color: #1fdfff;
+}
+.casevide{
+    opacity: 0;
+}
+.Tabindexe{
+    padding-top: 5px;
+    padding-right: 5px;
+    width: max-content;
+    height: 80px;
+    border-style: solid;
+    border-width: medium;
+    border-color: #000000;
+    //margin-top: 0px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+    position: relative;
+    display: inline-block;
+
+}
+.Tindexe{
+    width:40px ;
+    height: 40px;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    margin-bottom: 0px;
+    margin-left: 2px;
+    position: relative;
+    display: inline-block;
+    /*background-color: #b1bbff;*/
+}
+.Tindexe p{
+    color: black;
+}
