@@ -1,0 +1,46 @@
+.fichier{
+    width: 1125px;
+    height: 237px;
+    padding: 0px;
+}
+.Tblock{
+    width: 250px;
+    height: 100px;
+    border-style: solid;
+    border-width: medium;
+    border-color: #000000;
+    margin-top: 30px;
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+
+}
+.Tenreg{
+    width:20px ;
+    height: 20px;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    margin-top: 30px;
+    margin-left: 2px;
+    position: relative;
+    display: inline-block;
+    /*background-color: #b1bbff;*/
+}
+.Tenreg p{
+    width:10px ;
+    height: 10px;
+    color: black;
+    margin: 5px;
+    position: center;
+    font-size: 8px;
+}
+.casevide{
+    width:20px ;
+    height: 20px;
+    position: relative;
+    margin: 10px;
+    background-color: #1fdfff;
+    display: none;
+
+}

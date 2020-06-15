@@ -1,0 +1,69 @@
+{% extends 'pagedesimulation.html' %}
+{% load static %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'tobvc/css/display.css'%}">
+        <link rel="stylesheet" href="{% static 'tobvc/css/style.css'%}">
+    {% endblock %}
+
+    {% block fichier %}
+        <div  class="fichier"  id="TObVC" >
+
+        </div>
+    {% endblock %}
+
+    {% block operations %}
+        <li class="nav-item mt-3" role="presentation" id="initialiser" ><a class="nav-link active"  onclick="intialiser()"><i class="fas fa-redo"></i><span>initialisation</span></a>
+                        <div id="initialiser-form" class="form-box">
+
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="rechercher" ><a class="nav-link"  onclick="show_form_box(2)"><i class="fas fa-search"></i><span>Recherche</span></a>
+                        <div id="rechercher-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="rechercher-alert"></p>
+                                <input type="number" class="input-field" id="rechinp" placeholder="le clé" value="98" required>
+                                <button type="button" class="submit-btn" id="rechsub">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="inserer"><a class="nav-link" onclick="show_form_box(3)"><i class="fas fa-plus-circle"></i><span >Insertion</span></a>
+                        <div id="inserer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="inserer-alert"></p>
+                                <input   class="input-field" id="insenrg" placeholder="L'enregistrement" value="sfsd" >
+                                <input type="number"  class="input-field" id="inscle" placeholder="le clé" value="1" required>
+
+                                <button type="button" class="submit-btn" id="inssub">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="supprimer" ><a class="nav-link" onclick="show_form_box(4)"><i class="fas fa-minus-circle"></i><span>Supperession</span></a>
+                        <div id="supprimer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="supprimer-alert"></p>
+                                <input type="number"  class="input-field" id="supinp" placeholder="le clé" value="98" required>
+
+                                <button type="button" class="submit-btn" id="supsub">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+    {% endblock %}
+
+    {% block js %}
+        <script src="{% static 'tobvc/js/app.js'%}"></script>
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+

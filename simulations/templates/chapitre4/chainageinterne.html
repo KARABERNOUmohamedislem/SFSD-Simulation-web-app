@@ -1,0 +1,85 @@
+{% extends 'pagedesimulation.html' %}
+{% load static %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'chainageinterne/css/display.css'%}">
+        <link rel="stylesheet" href="{% static 'chainageinterne/css/style.css'%}">
+    {% endblock %}
+
+    {% block fichier %}
+        <div  class="fichier"  id="Essai lineaire" >
+                    <div class="hachage">
+                        <div class="case-hach" id="case-hach1">
+                            <p class="x">x:</p>
+                            <div class="hach">
+                                <p class="donne" id="donne1">44</p>
+                            </div>
+                        </div>
+                        <canvas id="fleche-right" class="fleche" height="40" width="40"></canvas>
+                        <div class="case-hach" id="case-hach2">
+                            <p class="x">h(x)=</p>
+                            <div class="hach">
+                                <p class="donne" id="donne2">8</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    {% endblock %}
+
+    {% block operations %}
+        <li class="nav-item mt-3" role="presentation" id="initialiser" ><a class="nav-link active"  onclick="show_form_box(1)"><i class="fas fa-redo"></i><span>initialisation</span></a>
+                        <div id="initialiser-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="initialiser-alert"></p>
+
+                                    <input id="initialiser-cles" value="12,11,34,23" type="text" class="input-field" placeholder="Les enregistrement"  required>
+
+                                <p class="ps">Ps: separez les enregistremets par des vergules ( , )</p>
+                                <button type="button" class="submit-btn" onclick="initialisation()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="rechercher" ><a class="nav-link" onclick="show_form_box(2)"><i class="fas fa-search"></i><span>Recherche</span></a>
+                        <div id="rechercher-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="rechercher-alert"></p>
+                                <input id="rechercher-cle" value="12" type="number" class="input-field" placeholder="L'enregistrement" required>
+                                <button type="button" class="submit-btn" onclick="rech()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="inserer"><a class="nav-link"  onclick="show_form_box(3)"><i class="fas fa-plus-circle"></i><span >Insertion</span></a>
+                        <div id="inserer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="inserer-alert"></p>
+                                <input id="inserer-cle" value="13" type="number"  class="input-field" placeholder="L'enregistrement" required>
+                                <button type="button" class="submit-btn" onclick="insere()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="supprimer" ><a class="nav-link" onclick="show_form_box(4)"><i class="fas fa-minus-circle"></i><span>Supperession</span></a>
+                        <div id="supprimer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="supprimer-alert"></p>
+                                <input id="supprimer-cle" value="12" type="number"  class="input-field" placeholder="L'enregistrement"  required>
+
+                                <button type="button" class="submit-btn" onclick="supp()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+    {% endblock %}
+
+    {% block js %}
+          <script src="{% static 'chainageinterne/js/app.js'%}"></script>
+    {% endblock %}
+
+
+
+
+
+
+

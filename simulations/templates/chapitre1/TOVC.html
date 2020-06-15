@@ -1,0 +1,139 @@
+{% extends 'pagedesimulation.html' %}
+{% load static %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'tovc/css/display.css'%}">
+        <link rel="stylesheet" href="{% static 'tovc/css/style.css'%}">
+    {% endblock %}
+
+    {% block fichier %}
+            <div class="fichier" id="TOVC">
+
+                </div>
+
+    {% endblock %}
+
+    {% block operations %}
+        <li class="nav-item mt-3" role="presentation" id="initialiser"><a class="nav-link "
+                            onclick="show_form_box(1)"><i class="fas fa-redo"></i><span>initialisation</span></a>
+                        <div id="initialiser-form" class="form-box">
+
+                            <form class="input-group">
+                                <p class="alertt" id="initialiser-alert"></p>
+                                <input type="text" class="input-field m-2" id="enregs"
+                                    placeholder="les enrigestrements." value="hello,sfsd,tof,Arbres" required>
+                                <p style="color: black; margin-top: 10px; display: inline; font-size:14px;">ps :
+                                    separer les enrigestrements par
+                                    des vergules ( , ).
+                                </p>
+
+                                <button type="button" class="submit-btn" id="sim-init">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="rechercher"><a class="nav-link"
+                            onclick="show_form_box(2)"><i class="fas fa-search"></i><span>Recherche</span></a>
+                        <div id="rechercher-form" class="form-box">
+
+                            <form class="input-group">
+                                <p class="alertt" id="rechercher-alert"></p>
+                                <input type="number" class="input-field" id="cle-rech" value="12" placeholder="Cle"
+                                    required>
+
+                                <button type="button" class="submit-btn" id="sim-rech">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="inserer"><a class="nav-link"
+                            onclick="show_form_box(3)"><i class="fas fa-plus-circle"></i><span>Insertion</span></a>
+                        <div id="inserer-form" class="form-box">
+
+                            <form class="input-group">
+                                <p class="alertt" id="inserer-alert"></p>
+                                <input type="number" class="input-field mb-2" id="cle-insrt" value="13"
+                                    placeholder="Cle" required>
+                                <input type="text" class="input-field mb-2" id="enreg-insrt" value="hello"
+                                    placeholder="Le champ">
+                                <button type="button" class="submit-btn" id="sim-insrt">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="supprimer"><a class="nav-link"
+                            onclick="show_form_box(4)"><i class="fas fa-minus-circle"></i><span>Supperession</span></a>
+                        <div id="supprimer-form" class="form-box">
+
+                            <form class="input-group">
+                                <p class="alertt" id="supprimer-alert"></p>
+                                <input type="number" class="input-field" id="cle-sup" value="12" placeholder="Cle"
+                                    required>
+
+                                <button type="button" class="submit-btn" id="sim-sup">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+    {% endblock %}
+
+    {% block js %}
+         <script src="{% static 'tovc/js/app.js'%}"></script>
+        <script src="{% static 'tovc/js/anime.js'%}"></script>
+    {% endblock %}
+
+    {% block algo %}
+
+    <div id="test" style="display: none;">
+        <div id="algorech">
+            <p id="line1">&nbsp<b>Recherche</b>(<b>Cle</b>):</p>
+            <p id="line2">&nbsptouve = faux ; sortir = faux; i = 0;</p>
+            <p id="line3">&nbsp<b>TQ</b>(<b>!</b>touve <b>ET</b> <b>!</b> sortir)</p>
+            <p id="line4">&nbsp&nbsp&nbspLecture_Enregistrement(i)</p>
+            <p id="line5">&nbsp&nbsp&nbsp<b>SI</b>(cle = Enregistrement.cle)</p>
+            <p id="line6">&nbsp&nbsp&nbsp&nbsp&nbsptrouve = vrai;</p>
+            <p id="line7">&nbsp&nbsp&nbsp<b>SI</b>(cle < Enregistrement.cle)</p>
+                    <p id="line8">&nbsp&nbsp&nbsp&nbsp&nbspsortir = vrai;</p>
+                    <p id="line9">&nbsp&nbsp&nbsp<b>SI</b>(cle > Enregistrement.cle)</p>
+                    <p id="line10">&nbsp&nbsp&nbsp&nbsp&nbspincerementer(i);</p>
+                    <p id="line11">&nbsp<b>FTQ</b></p>
+        </div>
+        <div id="algoinsertion">
+            <p id="line1">&nbsp<b>Insertion</b>(Enregistrement):</p>
+            <p id="line2">&nbsptrouve = <b>Recherche</b>(Enregistrement.cle);</p>
+            <p id="line3">&nbsp<b>SI</b>(<b>!</b>trouve)</p>
+            <p id="line4">&nbsp&nbsp&nbsp<b>SI</b>(espace_vide_est_suffisant)</p>
+            <p id="line5">&nbsp&nbsp&nbsp&nbsp&nbsp<b>Translation_a_droite</b>();</p>
+            <p id="line6">&nbsp&nbsp&nbsp&nbsp&nbsp<b>Inserer</b>(Enregistrement);</p>
+            <p id="line7">&nbsp&nbsp&nbsp<b>SINON</b></p>
+            <p id="line8">&nbsp&nbsp&nbsp&nbsp&nbsp<b>Allouer_un_block</b>();</p>
+            <p id="line9">&nbsp&nbsp&nbsp&nbsp&nbsp<b>Translation_a_droite</b>();</p>
+            <p id="line10">&nbsp&nbsp&nbsp&nbsp&nbsp<b>Inserer</b>(Enregistrement);</p>
+            <p id="line11">&nbsp<b>SINON</b></p>
+            <p id="line12">&nbsp&nbsp&nbsp Enregistrement_deja_existe;</p>
+
+        </div>
+        <div id="algosupression">
+            <p id="line1">&nbsp<b>Supression</b>(cle):</p>
+            <p id="line2">&nbsptrouve = <b>Recherche</b>(cle);</p>
+            <p id="line3">&nbsp<b>SI</b>(trouve)</p>
+            <p id="line4">&nbsp&nbsp&nbsp<b>Translation_a_gauche</b>();</p>
+            <p id="line5">&nbsp&nbsp&nbsp<b>SI</b>(espace_vide_est_superieur_a_taille_de_block)</p>
+            <p id="line6">&nbsp&nbsp&nbsp&nbsp&nbsp<b>Suprimmer_dernier_block</b>();</p>
+            <p id="line7">&nbsp<b>SINON</b></p>
+            <p id="line8">&nbsp&nbsp&nbspEnrigestement_deja_existe;</p>
+        </div>
+    </div>
+
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

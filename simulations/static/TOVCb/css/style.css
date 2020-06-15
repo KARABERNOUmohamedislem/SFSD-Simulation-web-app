@@ -1,0 +1,25 @@
+
+table,td{
+    border: 1px solid black;
+
+}
+table{
+    margin:auto;
+    border-spacing: 7px;
+    border-collapse: separate;
+    background-color: #F5B7F9;
+}
+td{
+    text-align: center;
+    background-color: #ffffff;
+
+}
+td{
+    padding: 5px 15px;
+}
+
+td p{
+    height: max-content;
+    width: max-content;
+    margin: 0;
+}

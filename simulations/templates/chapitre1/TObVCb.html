@@ -1,0 +1,16 @@
+{% extends 'pagedesimulation.html' %}
+{% load static %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'tobvcb/css/display.css'%}">
+        <link rel="stylesheet" href="{% static 'tobvcb/css/style.css'%}">
+    {% endblock %}
+
+    {% block fichier %}
+        <div  class="fichier"  id="TObVCb" >
+        </div>
+    {% endblock %}
+
+    {% block js %}
+         <script src="{% static 'tobvcb/js/app.js'%}"></script>
+    {% endblock %}

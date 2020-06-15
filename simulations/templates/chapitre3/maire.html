@@ -1,0 +1,59 @@
+{% extends 'pagedesimulation.html' %}
+{% load static %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'maire/css/display.css'%}">
+        <link rel="stylesheet" href="{% static 'maire/css/style.css'%}">
+        <link rel="stylesheet" href="{% static 'maire/css/treeflex.css'%}">
+    {% endblock %}
+
+    {% block fichier %}
+
+                    <div  class="tf-tree tf-gap-lg"  id="mair" >
+
+
+
+
+                    </div>
+    {% endblock %}
+
+    {% block operations %}
+        <li class="nav-item mt-3" role="presentation" id="rechercher" ><a class="nav-link"  onclick="show_form_box(2)" style="font-size: 14px"><i class="fas fa-search"></i><span>Recherche</span></a>
+                        <div id="rechercher-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="rechercher-alert"></p>
+                                <input type="number" id="rechinp" class="input-field" placeholder="L'enregistrement" value="48" required>
+                                <button type="button" id="rechsub" class="submit-btn">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="inserer"><a class="nav-link"  onclick="show_form_box(3)" style="font-size: 14px"><i class="fas fa-plus-circle"></i><span >Insertion</span></a>
+                        <div id="inserer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="inserer-alert"></p>
+                                <input type="number" id="insinp" class="input-field" placeholder="L'enregistrement" value="49" required>
+                                <button type="button" id="inssub" class="submit-btn">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="supprimer" ><a class="nav-link"  onclick="show_form_box(4)" style="font-size: 14px"><i class="fas fa-minus-circle"></i><span>Supperession</span></a>
+                        <div id="supprimer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="supprimer-alert"></p>
+                                <input type="number"  id="supinp" class="input-field" value="50" placeholder="L'enregistrement"  required>
+
+                                <button type="button" id="supsub" class="submit-btn">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+    {% endblock %}
+
+    {% block js %}
+         <script src="{% static 'maire/js/mair.js'%}"></script>
+    {% endblock %}
+
+
+

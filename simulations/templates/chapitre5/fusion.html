@@ -1,0 +1,92 @@
+{% extends 'pagedesimulation.html' %}
+{% load static %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'fusion/css/display.css'%}">
+        <link rel="stylesheet" href="{% static 'fusion/css/style.css'%}">
+    {% endblock %}
+
+    {% block fichier %}
+                 <div class="Fusion">
+                    <div class="simulation-area">
+                        <div class="fichier" id="fich1">fichier 1</div>
+                        <div class="fichier" id="fich2">fichier 2</div>
+                        <div class="buffers">
+                            buffers
+                            <div class="buffers-1-2">
+                                <div class="block2" id="buff1"></div>
+                                <div class="block2" id="buff2"></div>
+                            </div>
+                            <div class="buffer-3">
+                                <div class="block2" id="buff3"></div>
+                            </div>
+                        </div>
+                        <div class="fichier" id="fich3">fichier fusionne</div>
+                    </div>
+                </div>
+    {% endblock %}
+
+    {% block operations %}
+        <li class="nav-item mt-3" role="presentation" id="initialiser"><a class="nav-link active"
+                            onclick="show_form_box(1)"><i class="fas fa-redo"></i><span>initialisation</span></a>
+                        <div id="initialiser-form" class="form-box">
+
+                            <form class="input-group" >
+                                <p class="alertt" id="initialiser-alert"></p>
+                                <input type="text" id="input-fich1" class="input-field"
+                                    placeholder="initialiser le fichier 1" value="9,0,1,21,42,81,2,98,3,4" required
+                                    style="margin-bottom: 10px;">
+                                <input type="text" id="input-fich2" value="17,34,75,98,49,92,81,5" class="input-field"
+                                    placeholder="initialiser le fichier 2" required>
+
+                                <p class="ps">Ps: separez les enregistremets par des vergules ( , )</p>
+                                <button type="button" id="sim-init" class="submit-btn">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="inserer"><a class="nav-link"
+                            onclick="show_form_box(3)"><i class="fas fa-plus-circle"></i><span>Fusion ordonne</span></a>
+                        <div id="inserer-form" class="form-box">
+
+                            <form class="input-group" style="vertical-align: middle; text-align: center;">
+                                <p class="alertt" id="rechercher-alert"></p>
+                                <button type="button" id="sim-fusion" class="submit-btn">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+    {% endblock %}
+    {% block algo %}
+        <div class="algos" style="display: none;">
+                    <div id="algoinitialisation">
+                        <p id="line1">&nbsp<b>Initialisation</b>(<b>Tab_Cles</b>):</p>
+                        <p id="line2">&nbspTab_Cles = ordonne(Tab_Cles);</p>
+                        <p id="line3">&nbsp<b>TQ</b>(Tab_Cles_n'est_pas_terminee)</p>
+                        <p id="line4">&nbsp&nbsp&nbspTabCles[i]_Inserer_dans_Buffer();</p>
+                        <p id="line5">&nbsp&nbsp&nbspi++;</p>
+                        <p id="line6">&nbsp&nbsp&nbsp<b>SI</b>(Buffer_est_rempli)</p>
+                        <p id="line7">&nbsp&nbsp&nbsp&nbsp&nbspecrire_Buffer_dans_fichier();</p>
+                        <p id="line8">&nbsp<b>FTQ</b></p>
+                    </div>
+                    <div id="algofusion">
+                        <p id="line1">&nbsp<b>Fusion</b>(fich1 , fich2 ):</p>
+                        <p id="line2">&nbsp<b>TQ</b>(fich1_n'est_pas_terminee <b>ET</b> fich2_n'est_pas_terminee)</p>
+                        <p id="line3">&nbsp&nbsp&nbspLecture_des_blocks_dans_Buffer();</p>
+                        <p id="line4">&nbsp&nbsp&nbspcomparer_et_inserer_enrigestrement_dans_buffer3</p>
+                        <p id="line5">&nbsp&nbsp&nbspecrire_buffer3_dans_fichier3</p>
+                        <p id="line6">&nbsp<b>FTQ</b></p>
+
+                    </div>
+
+
+                </div>
+    {% endblock %}
+    {% block js %}
+        <script src="{% static 'fusion/js/anime.js'%}"></script>
+        <script src="{% static 'fusion/js/app.js'%}"></script>
+    {% endblock %}
+
+
+
+
+
+

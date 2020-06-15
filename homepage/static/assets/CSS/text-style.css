@@ -1,0 +1,183 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #fff;
+}
+
+.container-grey{
+    border-radius: 0%;
+    background-color: var(--grey1);
+    border-top: 0.0625rem solid var(--grey4);
+    border-bottom: 0.0625rem solid var(--grey4);
+}
+#bg-grey{
+    background-color: var(--grey1);
+}
+
+#bg-grey1{
+    background-color: var(--grey1);
+    border-bottom: 0.0625rem solid var(--grey4);
+}
+
+.nav-item{
+    padding-right: 1rem;
+}
+.nav-link{
+    font-family: "SF Display";
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: var(--grey9);
+}
+.nav-link:hover{
+    color: var(--grey12);
+}
+.primary-paragraph{
+    font-family: "SF Display";
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--grey11);
+}
+.primary-title{
+    font-family: "SF Display";
+    font-weight: 700;
+    font-size: 3.5rem;
+    color : var(--grey12);
+}
+
+.secondary-title{
+    display: inline-block;
+    font-family: "SF Display";
+    font-weight: 600;
+    font-size: 2rem;
+    color : var(--grey11);
+}
+
+.title{
+    display: inline-block;
+    font-family: "SF Display";
+    font-weight: 700;
+    font-size: 3rem;
+}
+.secondary-paragraph{
+    font-family: "SF Display";
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--grey10);
+}
+.course-link{
+    display: inline-block;
+    font-family: "SF Display";
+    font-weight: 500;
+    font-size: 1.3rem;
+    
+    bottom: 0px;
+}
+
+.simulate{
+    font-family: "SF Display";
+    font-weight: 600;
+    font-size: 3rem;
+    color: var(--grey11);
+}
+
+.btn{
+    min-width: 150px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-family: "SF Display";
+    font-weight: 500;
+    font-size: 1.35rem;
+    box-shadow: 2px 2px 6px var(--grey8);
+}
+
+.btn:hover{
+  
+    box-shadow: 4px 4px 10px var(--grey6);
+}
+
+
+/* bleu */
+
+#bg-bleu{
+    background-color: var(--bleu1);
+    color: #fff;
+}
+
+#bg-bleu:hover{
+    background-color: var(--bleu2);
+    transition: 100ms;
+}
+
+#bleu{
+    color: var(--bleu1);
+}
+
+/* pink */
+
+#bg-pink{
+    background-color: var(--pink1);
+    color: #fff;
+}
+
+#bg-pink:hover{
+    background-color: var(--pink2);
+    transition: 100ms;
+}
+
+#pink{
+    color: var(--pink1);
+}
+
+/* purple */
+
+#bg-purple{
+    background-color: var(--purple1);
+    color: #fff;
+}
+
+#bg-purple:hover{
+    background-color: var(--purple2);
+    transition: 100ms;
+}
+
+#purple{
+    color: var(--purple1);
+}
+
+/* red */
+
+#bg-red{
+    background-color: var(--red1);
+    color: #fff;
+}
+
+#bg-red:hover{
+    background-color: var(--red2);
+    transition: 100ms;
+}
+
+#red{
+    color: var(--red1);
+}
+
+#bg-dark-blue{
+    background-color: #071d58;
+    color: #fff;
+}
+
+#bg-dark-blue:hover{
+    background-color: #071058;
+    transition: 100ms;
+}
+
+
+#dark-blue{
+ color: #071d58;
+}
+
+hr{
+    width: 90%;
+    border-top: 2px solid var(--grey6);
+   margin-top: 2.8rem;
+}

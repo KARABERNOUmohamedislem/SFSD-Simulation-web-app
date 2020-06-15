@@ -1,0 +1,122 @@
+{% extends 'pagedesimulation.html' %}
+{% load static %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'chainagesepare/css/display.css'%}">
+
+        <link rel="stylesheet" href="{% static 'chainagesepare/css/SF-font.css'%}">
+        <link rel="stylesheet" href="{% static 'chainagesepare/css/style-2.css'%}">
+
+    {% endblock %}
+
+    {% block fichier %}
+                <div class="fichier">
+
+                    <div id="tab1">
+
+                    </div>
+                    <div id="tab2">
+                    </div>
+
+                </div>
+    {% endblock %}
+
+    {% block operations %}
+        <li class="nav-item mt-3" role="presentation" id="initialiser"><a class="nav-link"
+                            onclick="show_form_box(1)"><i class="fas fa-redo"></i><span>initialisation</span></a>
+                        <div id="initialiser-form" class="form-box">
+
+                            <form class="input-group">
+                                <p class="alertt" id="initialiser-alert"></p>
+                                <input type="text" class="input-field" id="taille-tab" placeholder="Les enregistrement"
+                                    value="4,87,12,1,0,23,34,6" required>
+                                <p style="color: black; margin-top: 10px;">ps : separer les cles par des vergules (,).
+                                </p>
+                                <button type="button" class="submit-btn" id="sim-init">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="rechercher"><a class="nav-link"
+                            onclick="show_form_box(2)"><i class="fas fa-search"></i><span>Recherche</span></a>
+                        <div id="rechercher-form" class="form-box">
+
+                            <form class="input-group">
+                                <p class="alertt" id="rechercher-alert"></p>
+                                <input type="number" class="input-field" id="cle-rech" value="47" placeholder="Le cle"
+                                    required>
+                                <button type="button" class="submit-btn" id="sim-rech">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="inserer"><a class="nav-link"
+                            onclick="show_form_box(3)"><i class="fas fa-plus-circle"></i><span>Insertion</span></a>
+                        <div id="inserer-form" class="form-box">
+
+                            <form class="input-group">
+                                <p class="alertt" id="inserer-alert"></p>
+                                <input type="number" class="input-field" id="cle-insrt" placeholder="Cle" value="47"
+                                    required>
+                                <button type="button" class="submit-btn" id="sim-insrt">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="supprimer"><a class="nav-link"
+                            onclick="show_form_box(4)"><i class="fas fa-minus-circle"></i><span>Supperession</span></a>
+                        <div id="supprimer-form" class="form-box">
+
+                            <form class="input-group">
+                                <p class="alertt" id="supprimer-alert"></p>
+                                <input type="number" class="input-field" id="cle-sup" value="47" placeholder="Cle"
+                                    required>
+
+                                <button type="button" class="submit-btn" id="sim-sup">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+    {% endblock %}
+
+    {% block js %}
+        <script src="{% static 'chainagesepare/js/anime.js'%}"></script>
+        <script src="{% static 'chainagesepare/js/app.js'%}"></script>
+    {% endblock %}
+
+    {% block algo %}
+        <div class="algos" style="display: none;">
+                        <div id="algorecherche">
+                            <p id="line1">&nbsp<b>Recherche</b>(<b>Cle</b>):</p>
+                            <p id="line2">&nbsptouve = faux ; sortir = faux ;indice = hashCode(cle);</p>
+                            <p id="line3">&nbsp<b>TQ</b>(<b>!</b>touve <b>ET</b> <b>!</b> sortir)</p>
+                            <p id="line4">&nbsp&nbsp&nbsp<b>SI</b>(cle = hash_table[indice])</p>
+                            <p id="line5">&nbsp&nbsp&nbsp&nbsp&nbsptrouve = vrai;</p>
+                            <p id="line6">&nbsp&nbsp&nbsp<b>SINON</b></p>
+                            <p id="line7">&nbsp&nbsp&nbsp&nbsp&nbsp<b>SI</b>(llc[indice]_n'est_pas_vide)</p>
+                            <p id="line8">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRecherche_llc(llc[indice]);</p>
+                            <p id="line9">&nbsp&nbsp&nbsp&nbsp&nbsp<b>SINON</b>:sortir = vrai;</p>
+                            <p id="line10">&nbsp<b>FTQ</b></p>
+                        </div>
+                        <div id="algoinsertion">
+                            <p id="line1">&nbsp<b>Insertion</b>(Enregistrement):</p>
+                            <p id="line2">&nbsptrouve = <b>Recherche</b>(Enregistrement.cle);</p>
+                            <p id="line3">&nbsp<b>SI</b>(<b>!</b>trouve)</p>
+                            <p id="line4">&nbsp&nbsp&nbsp<b>SI</b>(hash_table[indice]_est_vide)</p>
+                            <p id="line5">&nbsp&nbsp&nbsp&nbsp&nbsp<b>Inserer_dans_table</b>();</p>
+                            <p id="line6">&nbsp&nbsp&nbsp<b>SINON</b></p>
+                            <p id="line7">&nbsp&nbsp&nbsp&nbsp&nbsp<b>Inserer_a_la fin_du_llc[indice]</b>();</p>
+                            <p id="line8">&nbsp<b>SINON</b></p>
+                            <p id="line9">&nbsp&nbsp&nbspEnrigestrement_deja_existe.</p>
+                        </div>
+                        <algo id="algosupression">
+                            <p id="line1">&nbsp<b>Supression</b>(cle):</p>
+                            <p id="line2">&nbsptrouve = <b>Recherche</b>(cle);</p>
+                            <p id="line3">&nbsp<b>SI</b>(trouve)</p>
+                            <p id="line4">&nbsp&nbsp&nbsp<b>SI</b>(llc_n'est_pas_vide)</p>
+                            <p id="line5">&nbsp&nbsp&nbsp&nbsp&nbsp<b>remplace_case_trouve_par_dernier_block</b>();</p>
+                            <p id="line6">&nbsp&nbsp&nbsp&nbsp&nbsp<b>suprimmer_dernier_block</b>();</p>
+                            <p id="line7">&nbsp&nbsp&nbsp<b>SINON</b></p>
+                            <p id="line8">&nbsp&nbsp&nbsp&nbsp&nbsp<b>Suprimmer_la_case_trouve</b>();</p>
+                            <p id="line9">&nbsp<b>SINON</b></p>
+                            <p id="line10">&nbsp&nbsp&nbspEnrigestement_n'existe_pas;</p>
+                        </algo>
+
+                    </div>
+    {% endblock %}

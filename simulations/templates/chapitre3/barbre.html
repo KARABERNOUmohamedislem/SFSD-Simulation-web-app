@@ -1,0 +1,467 @@
+{% extends 'pagedesimulation.html' %}
+{% load static %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'barbre/css/display.css'%}">
+        <link rel="stylesheet" href="{% static 'barbre/css/Btree.css'%}">
+        <style>
+            #content{
+                height: max-content;
+            }
+
+</style>
+    {% endblock %}
+
+    {% block fichier %}
+
+                <div  class="fichier" id="Btree">
+                    <table id="entete" style="border: #000000 solid 1px; margin: 3px;">
+                        <tr>
+                          <td style="text-decoration: underline;">L'entete :</td>
+                        </tr>
+                        <tr>
+                          <td style="padding-left: 20px;">racine</td>
+                          <td class="entet" id="racine" style="border: #dddddd 1px solid; padding: 0px 12px; margin-right: 5px">-1</td>
+
+                            <td style="padding-left: 20px;">tete_blocs_libres</td>
+                            <td class="entet" id="t_b_l" style="border: #dddddd 1px solid; padding: 0px 12px; margin-right: 5px">-1</td>
+
+                            <td style="padding-left: 20px;">nombre des noeuds</td>
+                            <td class="entet" id="nbnoeud" style="border: #dddddd 1px solid; padding: 0px 12px; margin-right: 5px">0</td>
+
+                            <td style="padding-left: 20px;">nombre des valeurs</td>
+                            <td class="entet" id="nbvaleur" style="border: #dddddd 1px solid; padding: 0px 12px; margin-right: 5px">0</td>
+
+                          <td style="padding-left: 20px;">profondeur</td>
+                          <td class="entet" id="prof" style="border: #dddddd 1px solid; padding: 0px 12px; margin-right: 5px">0</td>
+                        </tr>
+                      </table>
+                    <div class="tree" style="margin-top: 30px;">
+                        <div id="bloc0" class="noeud">
+                          <div class="val"></div>
+                          <div class="val"></div>
+                          <div class="val"></div>
+                          <div class="val"></div>
+                        </div>
+                        <div class="ba" id="after_0" ></div>
+
+                        <div style="width: 80%; margin: auto;">
+                          <div style="width: 50%; float: left; position: relative;">
+                            <div class="to" id="to_2" style="width: 50%; right: 0%;"></div>
+                            <div class="to" id="to_1" style="width: 100%; right: 0%;"></div>
+                          </div>
+
+                          <div style="width: 50%; float: right; position: relative;">
+                            <div class="to" id="to_4" style="width: 50%; left: 0%;"></div>
+                            <div class="to" id="to_5" style="width: 100%; left: 0%;"></div>
+                          </div>
+                        </div>
+
+
+                        <div style="width: 100%; margin: auto;">
+                          <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_1" ></div></div>
+                          <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_2" ></div></div>
+                          <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_3" ></div></div>
+                          <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_4" ></div></div>
+                          <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_5" ></div></div>
+                        </div>
+
+                        <div style="width: 100%; margin: auto;">
+                          <div style="width: 20%; margin: auto; float: left;"><div id="bloc1" class="noeud">
+                            <div class="val"></div>
+                            <div class="val"></div>
+                            <div class="val"></div>
+                            <div class="val"></div>
+                          </div></div>
+                          <div style="width: 20%; margin: auto; float: left;"><div id="bloc2" class="noeud">
+                           <div class="val"></div>
+                           <div class="val"></div>
+                           <div class="val"></div>
+                           <div class="val"></div>
+                          </div></div>
+                          <div style="width: 20%; margin: auto; float: right;"><div id="bloc5" class="noeud">
+                           <div class="val"></div>
+                           <div class="val"></div>
+                           <div class="val"></div>
+                           <div class="val"></div>
+                          </div></div>
+                          <div style="width: 20%; margin: auto; float: right;"><div id="bloc4" class="noeud">
+                           <div class="val"></div>
+                           <div class="val"></div>
+                           <div class="val"></div>
+                           <div class="val"></div>
+                          </div></div>
+                          <div style="width: 20%; margin: auto; float: left;"><div id="bloc3" class="noeud">
+                            <div class="val"></div>
+                            <div class="val"></div>
+                            <div class="val"></div>
+                            <div class="val"></div>
+                          </div></div>
+                        </div>
+
+                        <div style="width: 100%; margin: auto;">
+                          <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="after_1" ></div></div>
+                          <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="after_2" ></div></div>
+                          <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="after_3" ></div></div>
+                          <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="after_4" ></div></div>
+                          <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="after_5" ></div></div>
+                        </div>
+
+
+                        <div style="width: 100%; margin: auto;">
+                          <div style="width: 40%; margin: auto; float: left;">
+                            <div style="width: 50%; margin: auto; float: left;">
+                              <div style="width: 80%; margin: auto;">
+                                <div style="width: 50%; float: left; position: relative;">
+                                  <div class="to" id="to_7" style="width: 50%; right: 0%;"></div>
+                                  <div class="to" id="to_6" style="width: 100%; right: 0%;"></div>
+                                </div>
+
+                                <div style="width: 50%; float: right; position: relative;">
+                                  <div class="to" id="to_9" style="width: 50%; left: 0%;"></div>
+                                  <div class="to" id="to_10" style="width: 100%; left: 0%;"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div style="width: 50%; margin: auto; float: right;">
+                              <div style="width: 80%; margin: auto;">
+                                <div style="width: 50%; float: left; position: relative;">
+                                  <div class="to" id="to_12" style="width: 50%; right: 0%;"></div>
+                                  <div class="to" id="to_11" style="width: 100%; right: 0%;"></div>
+                                </div>
+
+                                <div style="width: 50%; float: right; position: relative;">
+                                  <div class="to" id="to_14" style="width: 50%; left: 0%;"></div>
+                                  <div class="to" id="to_15" style="width: 100%; left: 0%;"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div style="width: 20%; margin: auto; float: center;">
+                            <div style="width: 80%; margin: auto;">
+                              <div style="width: 50%; float: left; position: relative;">
+                                <div class="to" id="to_17" style="width: 50%; right: 0%;"></div>
+                                <div class="to" id="to_16" style="width: 100%; right: 0%;"></div>
+                              </div>
+
+                              <div style="width: 50%; float: right; position: relative;">
+                                <div class="to" id="to_19" style="width: 50%; left: 0%;"></div>
+                                <div class="to" id="to_20" style="width: 100%; left: 0%;"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div style="width: 40%; margin: auto; float: right;">
+                            <div style="width: 50%; margin: auto; float: left;">
+                              <div style="width: 80%; margin: auto;">
+                                <div style="width: 50%; float: left; position: relative;">
+                                  <div class="to" id="to_22" style="width: 50%; right: 0%;"></div>
+                                  <div class="to" id="to_21" style="width: 100%; right: 0%;"></div>
+                                </div>
+
+                                <div style="width: 50%; float: right; position: relative;">
+                                  <div class="to" id="to_24" style="width: 50%; left: 0%;"></div>
+                                  <div class="to" id="to_25" style="width: 100%; left: 0%;"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div style="width: 50%; margin: auto; float: right;">
+                              <div style="width: 80%; margin: auto;">
+                                <div style="width: 50%; float: left; position: relative;">
+                                  <div class="to" id="to_27" style="width: 50%; right: 0%;"></div>
+                                  <div class="to" id="to_26" style="width: 100%; right: 0%;"></div>
+                                </div>
+
+                                <div style="width: 50%; float: right; position: relative;">
+                                  <div class="to" id="to_29" style="width: 50%; left: 0%;"></div>
+                                  <div class="to" id="to_30" style="width: 100%; left: 0%;"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div style="width: 100%; margin: auto;">
+                          <div style="width: 40%; margin: auto; float: left;">
+                            <div style="width: 50%; margin: auto; float: left;">
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_6" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_7" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_8" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_9" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_10" ></div></div>
+                            </div>
+                            <div style="width: 50%; margin: auto; float: right;">
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_11" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_12" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_13" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_14" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_15" ></div></div>
+                            </div>
+                          </div>
+                          <div style="width: 20%; margin: auto; float: right;">
+                            <div style="width: 100%; margin: auto;">
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_26" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_27" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_28" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_29" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_30" ></div></div>
+                            </div>
+                          </div>
+                          <div style="width: 40%; margin: auto; float: right;">
+                            <div style="width: 50%; margin: auto; float: left;">
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_16" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_17" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_18" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_19" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_20" ></div></div>
+                            </div>
+                            <div style="width: 50%; margin: auto; float: right;">
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_21" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_22" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_23" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_24" ></div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div class="ba" id="before_25" ></div></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div style="width: 100%; margin: auto;">
+                          <div style="width: 40%; margin: auto; float: left;">
+                            <div style="width: 50%; margin: auto; float: left;">
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc6" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                            </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc7" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                             </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc8" class="feuille">
+                               <div class="val"></div>
+                               <div class="val"></div>
+                               <div class="val"></div>
+                               <div class="val"></div>
+                              </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc9" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                              </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc10" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                              </div></div>
+                            </div>
+                            <div style="width: 50%; margin: auto; float: right;">
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc11" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                            </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc12" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                             </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc13" class="feuille">
+                               <div class="val"></div>
+                               <div class="val"></div>
+                               <div class="val"></div>
+                               <div class="val"></div>
+                              </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc14" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                              </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc15" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                              </div></div>
+                            </div>
+                          </div>
+                          <div style="width: 20%; margin: auto; float: right;">
+                            <div style="width: 100%; margin: auto; float: right;">
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc26" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                            </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc27" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                             </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc28" class="feuille">
+                               <div class="val"></div>
+                               <div class="val"></div>
+                               <div class="val"></div>
+                               <div class="val"></div>
+                              </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc29" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                              </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc30" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                              </div></div>
+                            </div>
+                          </div>
+                          <div style="width: 40%; margin: auto; float: right;">
+                            <div style="width: 50%; margin: auto; float: left;">
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc16" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                            </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc17" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                             </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc18" class="feuille">
+                               <div class="val"></div>
+                               <div class="val"></div>
+                               <div class="val"></div>
+                               <div class="val"></div>
+                              </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc19" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                              </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc20" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                              </div></div>
+
+                            </div>
+                            <div style="width: 50%; margin: auto; float: right;">
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc21" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                            </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc22" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                             </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc23" class="feuille">
+                               <div class="val"></div>
+                               <div class="val"></div>
+                               <div class="val"></div>
+                               <div class="val"></div>
+                              </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc24" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                              </div></div>
+                              <div style="width: 20%; margin: auto; float: left;"><div id="bloc25" class="feuille">
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                                <div class="val"></div>
+                              </div></div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                      <table id="table">
+                        <tr>
+                          <td class="c"></td>
+                          <td class="c"></td>
+                          <td class="c"></td>
+                          <td class="c"></td>
+                          <td class="c"></td>
+                        </tr>
+                      </table>
+                </div>
+    {% endblock %}
+
+    {% block operations %}
+        <li class="nav-item mt-3" role="presentation" id="initialiser" ><a class="nav-link" onclick="show_form_box(1)"><i class="fas fa-redo"></i><span>initialisation</span></a>
+                        <div id="initialiser-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="initialiser-alert"></p>
+                                    <input id='v_min' type="number" class="input-field" placeholder="Valeur min" value="1" required>
+                                    <input id='v_max' type="number" class="input-field" placeholder="Valeur max" value="8" required>
+                                    <input id='pas' type="number" class="input-field" placeholder="Le pas" value="1" required>
+                                <button type="button" class="submit-btn" onclick="bulk_loading()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="rechercher" ><a class="nav-link" onclick="show_form_box(2)"><i class="fas fa-search"></i><span>Recherche</span></a>
+                        <div id="rechercher-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="rechercher-alert"></p>
+                                <input id="cle_rech" type="number" class="input-field" placeholder="La clé" value="7" required>
+                                <button type="button" class="submit-btn" onclick="recherche()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="inserer"><a class="nav-link"  onclick="show_form_box(3)"><i class="fas fa-plus-circle"></i><span >Insertion</span></a>
+                        <div id="inserer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="inserer-alert"></p>
+                                <input id='cle_inser' type="number"  class="input-field" placeholder="La clé" value="9" required>
+                                <button type="button" class="submit-btn" onclick="insertion()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="supprimer" ><a class="nav-link" onclick="show_form_box(4)"><i class="fas fa-minus-circle"></i><span>Supperession</span></a>
+                        <div id="supprimer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="supprimer-alert"></p>
+                                <input id="cle_supp_ph" type="number"  class="input-field" placeholder="La clé" value="2" required>
+                                <button type="button" class="submit-btn" onclick="suppression_phys()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+    {% endblock %}
+
+    {% block js %}
+         <script src="{% static 'barbre/js/Barbre.js'%}"></script>
+    {% endblock %}
+
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+{% extends 'pagedesimulation.html' %}
+{% load static %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'bparbre/css/treeflex.css'%}">
+        <link rel="stylesheet" href="{% static 'bparbre/css/display.css'%}">
+        <link rel="stylesheet" href="{% static 'bparbre/css/style.css'%}">
+    {% endblock %}
+
+    {% block fichier %}
+           <div  class="fichier"  id="bPlusArbre"  >
+                    <div class="tf-tree">
+                        <div class="center">
+                            <ul id="list-0">
+                            </ul>
+                        </div>
+                        <div id="invisible" class="center" >
+
+                        </div>
+                    </div>
+                </div>
+    {% endblock %}
+
+    {% block operations %}
+        <li class="nav-item mt-3" role="presentation" id="initialiser" ><a class="nav-link active"  onclick="show_form_box(1)"><i class="fas fa-redo"></i><span>initialisation</span></a>
+                        <div id="initialiser-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="initialiser-alert"></p>
+
+                                    <input id="initialiser-cles" type="text" class="input-field" value="11,44,54,23,12,43,77,56,34" placeholder="Les enregistrement"  required>
+
+                                <p class="ps">Ps: separez les enregistremets par des vergules ( , )</p>
+                                <button type="button" class="submit-btn" onclick="initialisation()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="rechercher" ><a class="nav-link" onclick="show_form_box(2)"><i class="fas fa-search"></i><span>Recherche</span></a>
+                        <div id="rechercher-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="rechercher-alert"></p>
+                                <input id="rechercher-cle" value="11" type="number" class="input-field" placeholder="L'enregistrement" required>
+                                <button type="button" class="submit-btn" onclick="rech()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="inserer"><a class="nav-link"  onclick="show_form_box(3)"><i class="fas fa-plus-circle"></i><span >Insertion</span></a>
+                        <div id="inserer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="inserer-alert"></p>
+                                <input id="inserer-cle" value="20" type="number"  class="input-field" placeholder="L'enregistrement" required>
+                                <button type="button" class="submit-btn" onclick="insere()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="supprimer" ><a class="nav-link"  onclick="show_form_box(4)"><i class="fas fa-minus-circle"></i><span>Supperession</span></a>
+                        <div id="supprimer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="supprimer-alert"></p>
+                                <input id="supprimer-cle" type="number" value="11" class="input-field" placeholder="L'enregistrement"  required>
+
+                                <button type="button" class="submit-btn" onclick="supp()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+    {% endblock %}
+
+    {% block js %}
+        <script src="{% static 'bparbre/js/app.js'%}"></script>
+    {% endblock %}
+
+
+
+

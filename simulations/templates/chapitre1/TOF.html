@@ -1,0 +1,74 @@
+{% extends 'pagedesimulation.html' %}
+{% load static %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'tof/css/display.css'%}">
+        <link rel="stylesheet" href="{% static 'tof/css/style.css'%}">
+    {% endblock %}
+
+    {% block fichier %}
+         <div  class="fichier" id = "TOF"  >
+
+                </div>
+    {% endblock %}
+
+    {% block operations %}
+        <li class="nav-item mt-3" role="presentation" id="initialiser" ><a class="nav-link active"  onclick="show_form_box(1)"><i class="fas fa-redo"></i><span></span>Initialisation</span></a>
+                        <div id="initialiser-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="initialiser-alert"></p>
+
+                                    <input type="number" id="initialiser-nbr" class="input-field" placeholder="Nombre des enregistrements" value="10"   required>
+                                <input id='taux' type="text" class="input-field" placeholder="Taux de chargement" value="0.5"  required>
+                                <button type="button" class="submit-btn" onclick="init()">Simulation</button>
+
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="rechercher" ><a class="nav-link" " onclick="show_form_box(2)"><i class="fas fa-search"></i><span>Recherche</span></a>
+                        <div id="rechercher-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="rechercher-alert"></p>
+                                <input id="cle_rech" type="number" class="input-field" placeholder="La clé" value="68" required>
+                                <button type="button" class="submit-btn" onclick="rech()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="inserer"><a class="nav-link" onclick="show_form_box(3)"><i class="fas fa-plus-circle"></i><span >Insertion</span></a>
+                        <div id="inserer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="inserer-alert"></p>
+                                <input id='cle_inser' type="number"  class="input-field" placeholder="La clé" value="3" required>
+                                <button type="button" class="submit-btn" onclick="insere()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="supprimer" ><a class="nav-link"  onclick="show_form_box(4)"><i class="fas fa-minus-circle"></i><span>Supperession</span></a>
+                        <div id="supprimer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="supprimer-alert"></p>
+                                <input id="cle_supp_log" type="number"  class="input-field" placeholder="La clé" value="26" required>
+                                <p class="ps">ps : champ pour la suppression logique</p>
+                                <button type="button" class="submit-btn" onclick="supp()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+    {% endblock %}
+
+    {% block js %}
+        <script src="{% static 'tof/js/app.js'%}"></script>
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,114 @@
+
+table,td{
+    border: 1px solid black;
+}
+table#fichier{
+    position: absolute;
+    left: 220px;
+}
+td{
+    text-align: center;
+    background-color: #ffffff;
+
+}
+td{
+    padding: 15px;
+}
+
+caption#titre_fich{
+    caption-side: top;
+    text-align: center;
+}
+table#F1{
+    position: absolute;
+    top: 225px;
+    left: 200px;
+}
+table#F2{
+    position: absolute;
+    top: 225px;
+    left: 600px;
+}
+table#F3{
+    position: absolute;
+    top: 225px;
+    left: 1000px;
+}
+
+
+
+table#F1T{
+    position: absolute;
+    top: 365px;
+    left: 200px;
+}
+table#F2T{
+    position: absolute;
+    top: 365px;
+    left: 600px;
+}
+table#F3T{
+    position: absolute;
+    top:365px;
+    left: 1000px;
+}
+
+
+
+#frg{
+    position: absolute;
+    top: 200px;
+    animation-name: example;
+    animation-duration: 30s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    text-align: center;
+}
+
+@keyframes example {
+    0%   {background-color:white; left:1120px; top:200px;}
+    50%  {background-color:white; left:130px; top:200px;}
+    100% {background-color:white; left:1120px; top:200px;}
+}
+.anim{
+    color: yellow;
+    font-weight: bold;
+    font-family: Comic Sans MS;
+}
+
+
+
+
+#txtTri{
+    position: absolute;
+    top: 340px;
+
+    animation-name: examples;
+    animation-duration: 30s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    text-align: center;
+}
+@keyframes examples {
+    0%   {background-color:white; left:1120px; top:340px;}
+    50%  {background-color:white; left:130px; top:340px;}
+    100% {background-color:white; left:1120px; top:340px;}
+}
+.animtri{
+    font-style: italic;
+    font-weight: bold;
+    color: deeppink;
+    font-family: Comic Sans MS;
+}
+
+
+caption#titre_fichTr{
+    caption-side: bottom;
+    text-align: center;
+}
+
+table#fichierTr{
+    position: absolute;
+    left: 215px;
+    top: 500px;
+}

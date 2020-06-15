@@ -1,0 +1,165 @@
+{% extends 'pagedesimulation.html' %}
+{% load static %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'tri/css/display.css'%}">
+        <link rel="stylesheet" href="{% static 'tri/css/style.css'%}">
+    {% endblock %}
+
+    {% block fichier %}
+                <div  class="fichier" id="trii"  >
+                    <table id="fichier" style="width: 10%">
+                        <caption id="titre_fich">Fragmentation au niveau du nœud maître (Fichier à 15 blocks contigus non triés)</caption>
+                        <tr>
+                            <td id="block1"> </td>
+                            <td id="block2"> </td>
+                            <td id="block3"> </td>
+                            <td id="block4"> </td>
+                            <td id="block5"> </td>
+                            <td id="block6"> </td>
+                            <td id="block7"> </td>
+                            <td id="block8"> </td>
+                            <td id="block9"> </td>
+                            <td id="block10"> </td>
+                            <td id="block11"> </td>
+                            <td id="block12"> </td>
+                            <td id="block13"> </td>
+                            <td id="block14"> </td>
+                            <td id="block15"> </td>
+                        </tr>
+                    </table>
+                    <div hidden id="hid">
+                        <p  class="anim" id="frg">Fragmentation</p>
+                        <table id="F1">
+                            <caption>Fragment1</caption>
+                            <tr>
+                                <td id="1frag1"> </td>
+                                <td id="1frag2"> </td>
+                                <td id="1frag3"> </td>
+                                <td id="1frag4"> </td>
+                                <td id="1frag5"> </td>
+                            </tr>
+                        </table>
+                        <table id="F2">
+                            <caption>Fragment2</caption>
+                            <tr>
+                                <td id="2frag1"> </td>
+                                <td id="2frag2"> </td>
+                                <td id="2frag3"> </td>
+                                <td id="2frag4"> </td>
+                                <td id="2frag5"> </td>
+                            </tr>
+                        </table>
+                        <table id="F3">
+                            <caption>Fragment3</caption>
+                            <tr>
+                                <td id="3frag1"> </td>
+                                <td id="3frag2"> </td>
+                                <td id="3frag3"> </td>
+                                <td id="3frag4"> </td>
+                                <td id="3frag5"> </td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <div hidden id="trihide">
+                        <p class="animtri" id="txtTri">Tri</p>
+                        <table id="F1T">
+                            <caption>Fragment1-Trié</caption>
+                            <tr>
+                                <td id="1frag1T"> </td>
+                                <td id="1frag2T"> </td>
+                                <td id="1frag3T"> </td>
+                                <td id="1frag4T"> </td>
+                                <td id="1frag5T"> </td>
+                            </tr>
+                        </table>
+                        <table id="F2T">
+                            <caption>Fragment2-Trié</caption>
+                            <tr>
+                                <td id="2frag1T"> </td>
+                                <td id="2frag2T"> </td>
+                                <td id="2frag3T"> </td>
+                                <td id="2frag4T"> </td>
+                                <td id="2frag5T"> </td>
+                            </tr>
+                        </table>
+                        <table id="F3T">
+                            <caption>Fragment3-Trié</caption>
+                            <tr>
+                                <td id="3frag1T"> </td>
+                                <td id="3frag2T"> </td>
+                                <td id="3frag3T"> </td>
+                                <td id="3frag4T"> </td>
+                                <td id="3frag5T"> </td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <div hidden id="fichTr">
+                        <table id="fichierTr" style="width: 10%">
+                            <caption id="titre_fichTr">Fusion au niveau du nœud maître</caption>
+                            <tr>
+                                <td id="block1T"> </td>
+                                <td id="block2T"> </td>
+                                <td id="block3T"> </td>
+                                <td id="block4T"> </td>
+                                <td id="block5T"> </td>
+                                <td id="block6T"> </td>
+                                <td id="block7T"> </td>
+                                <td id="block8T"> </td>
+                                <td id="block9T"> </td>
+                                <td id="block10T"> </td>
+                                <td id="block11T"> </td>
+                                <td id="block12T"> </td>
+                                <td id="block13T"> </td>
+                                <td id="block14T"> </td>
+                                <td id="block15T"> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+    {% endblock %}
+
+    {% block operations %}
+        <li class="nav-item mt-3" role="presentation" id="initialiser_perso" ><a class="nav-link active" onclick="show_form_box(1)"><i class="fas fa-redo"></i><span>Initialisation Personalisée</span></a>
+                        <div id="initialiser-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="initialiser-alert"></p>
+
+                                    <input value="80,99,11,23,42,34,54,53,66,4,25,49,50,18,35" id="cles" type="text" class="input-field" placeholder="Les enregistrement"  required>
+
+                                <p class="ps">Ps: separez les enregistremets par des vergules ( , )</p>
+                                <button type="button" class="submit-btn" onclick="init_perso()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="initialiser_random" ><a class="nav-link" onclick="show_form_box(2)"><i class="fas fa-redo"></i><span>Initialisation Aléatoire</span></a>
+                        <div id="rechercher-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="rechercher-alert"></p>
+                                <button type="button" class="submit-btn" onclick="init_random()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="tri"><a class="nav-link"  onclick="show_form_box(3)"><i class="fas fa-sort-amount-down-alt"></i><span >TRI</span></a>
+                        <div id="inserer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="inserer-alert"></p>
+                                <button type="button" class="submit-btn" onclick="tri()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+    {% endblock %}
+
+    {% block js %}
+        <script src="{% static 'tri/js/app.js'%}"></script>
+    {% endblock %}
+
+
+

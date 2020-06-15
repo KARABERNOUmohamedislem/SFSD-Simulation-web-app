@@ -1,0 +1,135 @@
+{% extends 'pagedesimulation.html' %}
+{% load static %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'tovcb/css/display.css'%}">
+        <link rel="stylesheet" href="{% static 'tovcb/css/style.css'%}">
+    {% endblock %}
+
+    {% block fichier %}
+       <div  class="fichier" id="tovcb"  >
+
+                    <br>
+                    <table id="block1" style="width: 10%">
+                        <caption>block1</caption>
+                        <tr>
+                            <td id="block1enreg1"> </td>
+                            <td id="block1enreg2"> </td>
+                            <td id="block1enreg3"> </td>
+                            <td id="block1enreg4"> </td>
+                            <td id="block1enreg5"> </td>
+                            <td id="block1enreg6"> </td>
+                            <td id="block1enreg7"> </td>
+                        </tr>
+                    </table>
+
+                    <table id="block2" style="width: 10%">
+                        <caption>block2</caption>
+                        <tr>
+                            <td id="block2enreg1"> </td>
+                            <td id="block2enreg2"> </td>
+                            <td id="block2enreg3"> </td>
+                            <td id="block2enreg4"> </td>
+                            <td id="block2enreg5"> </td>
+                            <td id="block2enreg6"> </td>
+                            <td id="block2enreg7"> </td>
+                        </tr>
+                    </table>
+                    <table id="block3" style="width: 10%">
+                        <caption>block3</caption>
+                        <tr>
+                            <td id="block3enreg1"> </td>
+                            <td id="block3enreg2"> </td>
+                            <td id="block3enreg3"> </td>
+                            <td id="block3enreg4"> </td>
+                            <td id="block3enreg5"> </td>
+                            <td id="block3enreg6"> </td>
+                            <td id="block3enreg7"> </td>
+                        </tr>
+                    </table>
+                    <table id="block4" style="width: 10%">
+                        <caption>block4</caption>
+                        <tr>
+                            <td id="block4enreg1"> </td>
+                            <td id="block4enreg2"> </td>
+                            <td id="block4enreg3"> </td>
+                            <td id="block4enreg4"> </td>
+                            <td id="block4enreg5"> </td>
+                            <td id="block4enreg6"> </td>
+                            <td id="block4enreg7"> </td>
+                        </tr>
+                    </table>
+                    <table id="block5" style="width: 10%">
+                        <caption>block5</caption>
+                        <tr>
+                            <td id="block5enreg1"> </td>
+                            <td id="block5enreg2"> </td>
+                            <td id="block5enreg3"> </td>
+                            <td id="block5enreg4"> </td>
+                            <td id="block5enreg5"> </td>
+                            <td id="block5enreg6"> </td>
+                            <td id="block5enreg7"> </td>
+                        </tr>
+                    </table>
+
+
+                </div>
+    {% endblock %}
+
+    {% block operations %}
+        <li class="nav-item mt-3" role="presentation" id="initialiser" ><a class="nav-link active"  onclick="show_form_box(1)"><i class="fas fa-redo"></i><span>initialisation</span></a>
+                        <div id="initialiser-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="initialiser-alert"></p>
+
+                                    <input value="me,to,vcb" id="initialiser-enrs" type="text" class="input-field" placeholder="Les enregistrement"  required>
+
+                                <p class="ps">Ps: separez les enregistremets par des vergules ( , )</p>
+                                <button type="button" class="submit-btn" onclick="init()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="rechercher" ><a class="nav-link"  onclick="show_form_box(2)"><i class="fas fa-search"></i><span>Recherche</span></a>
+                        <div id="rechercher-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="rechercher-alert"></p>
+                                <input value="3" id="rechercher-cle" type="number" class="input-field" placeholder="L'enregistrement" required>
+                                <button type="button" class="submit-btn" onclick="rech()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="inserer"><a class="nav-link" onclick="show_form_box(3)"><i class="fas fa-plus-circle"></i><span >Insertion</span></a>
+                        <div id="inserer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="inserer-alert"></p>
+                                <input value="6" id="inserer-cle" type="number"  class="input-field" placeholder="L'enregistrement" required>
+                                <input value="aa" id="inserer-enr" type="text"  class="input-field" placeholder="L'enregistrement" required>
+
+                                <button type="button" class="submit-btn" onclick="insere()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+        <li class="nav-item mt-3" role="presentation" id="supprimer" ><a class="nav-link" onclick="show_form_box(4)"><i class="fas fa-minus-circle"></i><span>Supperession</span></a>
+                        <div id="supprimer-form" class="form-box">
+
+                            <form  class="input-group">
+                                <p class="alertt" id="supprimer-alert"></p>
+                                <input value="3" id="supprimer-cle" type="number"  class="input-field" placeholder="L'enregistrement"  required>
+
+                                <button type="button" class="submit-btn" onclick="supp()">Simulation</button>
+                            </form>
+                        </div>
+                    </li>
+    {% endblock %}
+
+    {% block js %}
+        <script src="{% static 'tovcb/js/app.js'%}"></script>
+
+    {% endblock %}
+
+
+
+
