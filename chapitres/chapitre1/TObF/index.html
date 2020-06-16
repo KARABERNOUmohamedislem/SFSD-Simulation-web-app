@@ -36,7 +36,7 @@
                                 <p class="alertt" id="initialiser-alert"></p>
                                     <input id='nb_enr' type="number" class="input-field" placeholder="Nombre des enregistrements" value="17"  required>
                                     <input id='taux' type="text" class="input-field" placeholder="Taux de chargement" value="0.8"  required>
-                                <button type="submit" class="submit-btn" onclick="bulk_loading()">Simulation</button>
+                                <button type="button" class="submit-btn" onclick="bulk_loading()">Simulation</button>
                             </form>
                         </div>
                     </li>
@@ -46,7 +46,7 @@
                             <form  class="input-group">
                                 <p class="alertt" id="rechercher-alert"></p>
                                 <input id="cle_rech" type="number" class="input-field" placeholder="La clé" value="2" required>
-                                <button type="submit" class="submit-btn" onclick="recherche()">Simulation</button>
+                                <button type="button" class="submit-btn" onclick="recherche()">Simulation</button>
                             </form>
                         </div>
                     </li>
@@ -57,7 +57,7 @@
                                 <p class="alertt" id="inserer-alert"></p>
                                 <input id='cle_inser' type="number"  class="input-field" placeholder="La clé" value="1" required>
                                 <input id='enr_inser' type="text"  class="input-field" placeholder="L'enregistrement" value="Wail" required>
-                                <button type="submit" class="submit-btn" onclick="insertion()">Simulation</button>
+                                <button type="button" class="submit-btn" onclick="insertion()">Simulation</button>
                             </form>
                         </div>
                     </li>
@@ -68,11 +68,11 @@
                                 <p class="alertt" id="supprimer-alert"></p>
                                 <input id="cle_supp_ph" type="number"  class="input-field" placeholder="La clé" value="0" required>
                                 <p class="ps">ps : champ pour la suppression physique</p>
-                                <button type="submit" class="submit-btn" onclick="suppression_phys()">Simulation</button>
+                                <button type="button" class="submit-btn" onclick="suppression_phys()">Simulation</button>
 
                                 <input id="cle_supp_log" type="number"  class="input-field" placeholder="La clé" value="0" required>
                                 <p class="ps">ps : champ pour la suppression logique</p>
-                                <button type="submit" class="submit-btn" onclick="suppression_log()">Simulation</button>
+                                <button type="button" class="submit-btn" onclick="suppression_log()">Simulation</button>
                             </form>
                         </div>
                     </li>

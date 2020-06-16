@@ -18,7 +18,7 @@
 
 <body id="page-top" class="sidebar-toggled">
     <div id="wrapper">
-        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion  p-0 toggled">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion  p-0 toggled" style="height: max-content">
             <div class="sidebare choices container-fluid d-flex flex-column p-0 ">
 <!--                le logo-->
                 <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="../../../Page D'Acceuil/index.html">
@@ -38,7 +38,7 @@
                                     <input id='v_min' type="number" class="input-field" placeholder="Valeur min" value="1" required>
                                     <input id='v_max' type="number" class="input-field" placeholder="Valeur max" value="8" required>
                                     <input id='pas' type="number" class="input-field" placeholder="Le pas" value="1" required>
-                                <button type="submit" class="submit-btn" onclick="bulk_loading()">Simulation</button>
+                                <button type="button" class="submit-btn" onclick="bulk_loading()">Simulation</button>
                             </form>
                         </div>
                     </li>
@@ -48,7 +48,7 @@
                             <form  class="input-group">
                                 <p class="alertt" id="rechercher-alert"></p>
                                 <input id="cle_rech" type="number" class="input-field" placeholder="La clé" value="7" required>
-                                <button type="submit" class="submit-btn" onclick="recherche()">Simulation</button>
+                                <button type="button" class="submit-btn" onclick="recherche()">Simulation</button>
                             </form>
                         </div>
                     </li>
@@ -58,7 +58,7 @@
                             <form  class="input-group">
                                 <p class="alertt" id="inserer-alert"></p>
                                 <input id='cle_inser' type="number"  class="input-field" placeholder="La clé" value="9" required>
-                                <button type="submit" class="submit-btn" onclick="insertion()">Simulation</button>
+                                <button type="button" class="submit-btn" onclick="insertion()">Simulation</button>
                             </form>
                         </div>
                     </li>
@@ -68,7 +68,7 @@
                             <form  class="input-group">
                                 <p class="alertt" id="supprimer-alert"></p>
                                 <input id="cle_supp_ph" type="number"  class="input-field" placeholder="La clé" value="2" required>
-                                <button type="submit" class="submit-btn" onclick="suppression_phys()">Simulation</button>
+                                <button type="button" class="submit-btn" onclick="suppression_phys()">Simulation</button>
                             </form>
                         </div>
                     </li>
@@ -77,8 +77,8 @@
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
         </nav>
-        <div class="d-flex flex-column" id="content-wrapper">
-            <div id="content">
+        <div class="d-flex flex-column" style="height: min-content" id="content-wrapper">
+            <div id="content" style="height: min-content">
                 <nav>
                     <div class=" navigate container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
                         <nav class="navbar text-light navbar-expand-lg navbar-dark">

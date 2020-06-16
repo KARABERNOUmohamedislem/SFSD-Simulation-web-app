@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="239b0c42-7f89-49c0-9d00-57749ef106ac" name="Default Changelist" comment="" />
+    <list default="true" id="239b0c42-7f89-49c0-9d00-57749ef106ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapitres/chapitre3/B-arbre/assets/css/Btree.css" beforeDir="false" afterPath="$PROJECT_DIR$/chapitres/chapitre3/B-arbre/assets/css/Btree.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapitres/chapitre3/B-arbre/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/chapitres/chapitre3/B-arbre/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1aXwBdsesgDqCASm4GZ5O0o3P0O" />
   <component name="ProjectViewState">
@@ -17,9 +24,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../fr_FR.dic" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="2" Folder0="C:\Users\USER\Desktop" Folder1="C:\Users\USER\Desktop" CustomDictionaries="2" CustomDictionary0="C:\Users\USER\Desktop\fr.dic" CustomDictionary1="C:\Users\USER\Desktop\fr_FR.dic" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="project-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -35,6 +41,8 @@
       <workItem from="1589785494061" duration="2162000" />
       <workItem from="1589787988903" duration="105000" />
       <workItem from="1589892007373" duration="726000" />
+      <workItem from="1590863370125" duration="593000" />
+      <workItem from="1591638548840" duration="3601000" />
     </task>
     <servers />
   </component>
@@ -46,9 +54,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589786084963" />
-    <state x="184" y="6" key="SettingsEditor" timestamp="1589786089568">
+    <state x="184" y="6" key="SettingsEditor" timestamp="1591642375042">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589786089568" />
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591642375042" />
   </component>
 </project>
