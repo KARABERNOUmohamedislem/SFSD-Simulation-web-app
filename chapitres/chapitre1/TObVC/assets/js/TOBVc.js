@@ -1001,11 +1001,11 @@ function supp() {
 async function intialiser(){
     vider_alertt();
     show_form_box(1);
-    await (fich.insertion(10,'idlike'));
+    await (fich.insertion(10,'ilike'));
     await sleep(200);
-    await (fich.insertion(70,'tofu'));
+    await (fich.insertion(70,'sf'));
     await sleep(200);
-    await (fich.insertion(98,'ckhard'));
+    await (fich.insertion(98,'sd'));
 
 }
 
